@@ -1,0 +1,10 @@
+#$ -cwd
+#$ -q high_mem
+#$ -S /bin/bash
+
+module load filterPCRdupl/vX.XX
+
+FILE1=/nobackup/data14/DATA/A.Antonelli/results/fastq_trimmed/P5201_101_S17_L006_R1_001.fastq
+FILE2=/nobackup/data14/DATA/A.Antonelli/results/fastq_trimmed/P5201_101_S17_L006_R2_001.fastq
+
+filterPCRdupl.pl -fastq1=$FILE1 -fastq2=$FILE2 -prefix=filterPCRdupl_AA_16_04
